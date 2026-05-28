@@ -202,3 +202,48 @@ When expanding from 4 marketing hubs to **thousands of regions globally**, we im
 1. **Partitioning**: Partition the `processed_weather_data` table by **`timestamp` (Day-based)**. This prevents full table scans when querying recent marketing slots, dropping query costs by over 90%.
 2. **Clustering**: Cluster tables by **`latitude` and `longitude`**. Since location is the primary search filter for marketing servers, clustering physical layout optimizes spatial search queries.
 3. **High-Throughput Loading**: Move from JSON batch files to **BigQuery Storage Write API** or utilize **Apache PySpark** running on GCP Dataproc to process large spatial inputs in parallel before running load jobs.
+
+---
+
+## 📊 Power BI Connection & Free Hosting Guide
+
+To build a professional client experience, connect your **Power BI Desktop** client to BigQuery and host the report freely in the cloud.
+
+### 🔗 Live Interactive Dashboard
+> [!TIP]
+> Once you complete the steps below to host your dashboard, replace this placeholder link with your live URL:
+> **[👉 View Live Power BI Interactive Dashboard](https://app.powerbi.com/view?r=YOUR_FREE_PUBLISHED_REPORT_LINK_HERE)**
+
+---
+
+### Step 1: Connect Power BI to Google BigQuery
+1. Open **Power BI Desktop** on your computer.
+2. Click **Get Data** (Home ribbon) ➡️ select **Database** ➡️ **Google BigQuery** ➡️ click **Connect**.
+3. Sign in using your GCP email: **`sumithramani8@gmail.com`**.
+4. In the Connection window:
+   - Select **Import** (Best performance for sandbox environments).
+   - Click **Advanced options**.
+   - Copy the SQL query from [queries/summary.sql](file:///c:/Users/msumithra/Documents/tacheon-assessment/task2-pipeline-building/queries/summary.sql) and paste it under **SQL statement** to retrieve pre-calculated marketing triggers automatically.
+5. Click **OK** ➡️ click **Load** to ingest the data into your Power BI model.
+
+---
+
+### Step 2: Build the Visualizations
+Use the loaded columns to create high-value visuals:
+- **Map View**: Plot `latitude` and `longitude` to show target marketing hubs.
+- **KPI Cards**: Show counts of `trigger_extreme_heat_ads`, `trigger_umbrella_ads`, and `trigger_layering_apparel_ads`.
+- **Trend Charts**: Display apparent temperatures and temperature amplitude over time.
+
+---
+
+### Step 3: Host the Dashboard Freely (Publish to Web)
+Microsoft allows publishing reports to the cloud for free using a personal workspace:
+1. In Power BI Desktop, click **Publish** (Home ribbon).
+2. Save your file locally, then log in using your Power BI account.
+3. Select **My Workspace** as the destination (My Workspace is 100% free and private to you).
+4. Go to **[https://app.powerbi.com/](https://app.powerbi.com/)** and log in.
+5. Open your report under **My Workspace**.
+6. Click **File** (top menu) ➡️ **Embed report** ➡️ **Publish to Web (Public)**.
+7. Click **Create embed code** ➡️ **Publish**.
+8. Copy the **Link you can send in email** and paste it directly into the **Live Interactive Dashboard** placeholder link above!
+
