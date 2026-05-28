@@ -73,26 +73,26 @@ SELECT
   -- =========================================================================
   -- 1. Extreme Heat Alert (Temperature exceeds 35°C): Trigger cooling product ads (beverages, ACs)
   CASE 
-    WHEN max_temperature > 35.0 THEN TRUE 
-    ELSE FALSE 
+    WHEN max_temperature > 35.0 THEN 'Active' 
+    ELSE 'Inactive' 
   END AS trigger_extreme_heat_ads,
 
   -- 2. Heavy Rain Alert (Precipitation exceeds 5mm): Trigger ride-share, umbrella, or indoor-activity ads
   CASE 
-    WHEN total_precipitation > 5.0 THEN TRUE 
-    ELSE FALSE 
+    WHEN total_precipitation > 5.0 THEN 'Active' 
+    ELSE 'Inactive' 
   END AS trigger_umbrella_ads,
 
   -- 3. Real-feel Thermal Stress Alert (Apparent temperature exceeds 38°C): Trigger health/dehydration alerts
   CASE 
-    WHEN max_apparent_temperature > 38.0 THEN TRUE 
-    ELSE FALSE 
+    WHEN max_apparent_temperature > 38.0 THEN 'Active' 
+    ELSE 'Inactive' 
   END AS trigger_heat_stress_alerts,
 
   -- 4. Thermal Volatility Alert (Diurnal swing exceeds 12°C): Trigger apparel ads (layering garments)
   CASE 
-    WHEN diurnal_temperature_amplitude > 12.0 THEN TRUE 
-    ELSE FALSE 
+    WHEN diurnal_temperature_amplitude > 12.0 THEN 'Active' 
+    ELSE 'Inactive' 
   END AS trigger_layering_apparel_ads
 
 FROM
