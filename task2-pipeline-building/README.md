@@ -212,7 +212,7 @@ To deliver a professional client experience, connect your **Looker Studio** repo
 ### 🔗 Live Interactive Dashboard
 > [!TIP]
 > Once you configure your sharing permissions in Looker Studio, replace this placeholder link with your live report URL:
-> **[👉 View Live Looker Studio Interactive Dashboard](https://lookerstudio.google.com/reporting/YOUR_SHARED_REPORT_LINK_HERE)**
+> **[👉 View Live Looker Studio Interactive Dashboard](https://datastudio.google.com/reporting/3691e33a-fb6e-4ba9-aa1b-a173989a5379)**
 
 ---
 
